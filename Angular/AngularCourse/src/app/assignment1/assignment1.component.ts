@@ -9,21 +9,12 @@ import * as _ from 'lodash';
 export class Assignment1Component implements OnInit {
 
   counter : number = 0;
-  randomNummber: number = 0;
+  randomNumber: number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
-    setInterval(this.upCounter, 200);
-    setInterval(this.updateRandomNumber, 2000);
-    this.updateRandomNumber();
-  }
-
-  upCounter(){
-    this.counter = this.counter + 1;
-  }
-
-  updateRandomNumber(){
-    this.randomNummber = _.random(1,100);
+    setInterval(() => this.counter = this.counter + 1, 200);
+    setInterval(() => this.randomNumber = _.random(1,100), 2000);
   }
 }
