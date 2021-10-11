@@ -1,0 +1,9 @@
+<h2>Assignment 2</h2>
+<div *ngFor="let holiday of holidays">
+    <div>{{holiday.city}} -- temperature: {{holiday.temperature}} 
+        <div *ngIf="holiday.temperature < 5">very cold</div>
+        <div *ngIf="holiday.temperature > 5 && holiday.temperature < 12">cloudy</div>
+        <div *ngIf="holiday.temperature > 17">very nice weather</div>
+    </div>
+    <hr>
+</div>
